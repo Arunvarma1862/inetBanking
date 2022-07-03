@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [inetBankingV1]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Login DDTest2(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="Author" value="virat"/>
+    <classes>
+      <class name="com.inetBanking.testCases.TC_LoginDDT_002">
+        <methods>
+          <include name="setup"/>
+          <include name="checkStatus"/>
+          <include name="TearDown"/>
+          <include name="intializeExtentReport"/>
+          <include name="generateExtentReport"/>
+          <include name="loginTest2" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- com.inetBanking.testCases.TC_LoginDDT_002 -->
+    </classes>
+  </test> <!-- Login DDTest2(failed) -->
+  <test thread-count="5" name="AddCustomerTest(failed)">
+    <parameter name="browser" value="edge"/>
+    <parameter name="Author" value="varun"/>
+    <classes>
+      <class name="com.inetBanking.testCases.TC_AddCustomer_002">
+        <methods>
+          <include name="AddCustomer"/>
+          <include name="setup"/>
+          <include name="checkStatus"/>
+          <include name="TearDown"/>
+          <include name="intializeExtentReport"/>
+          <include name="generateExtentReport"/>
+        </methods>
+      </class> <!-- com.inetBanking.testCases.TC_AddCustomer_002 -->
+    </classes>
+  </test> <!-- AddCustomerTest(failed) -->
+</suite> <!-- Failed suite [inetBankingV1] -->
