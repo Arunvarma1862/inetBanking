@@ -18,14 +18,14 @@ public class TC_LoginTest_001 extends BaseClass {
 		
 		lp.setUserName(username);
 		extentTest.info("<b><i>Enter valid userID</i></b>");
+		logger.info("Enter username");
 		
-	//	logger.info("enter username");
 		lp.setPassword(password);
 		extentTest.info("<b><i>Enter valid Password</i></b>");
-	//	logger.info("enter password");
+		logger.info("enter password");
 		lp.clickSubmit();
 		extentTest.log(Status.INFO,"<b><i>Click on login</i></b>");
-	//	logger.info("home page opened");
+    	logger.info("home page opened");
 		
 	
 		
@@ -35,13 +35,13 @@ public class TC_LoginTest_001 extends BaseClass {
 			
 			Assert.assertTrue(true);
 			extentTest.log(Status.INFO,"<b><i>home page opened</i></b>");
-			//logger.info("login test passed");
+			logger.info("login test passed");
 		}
 		else
 		{
 			extentTest.log(Status.INFO,"<b><i>Invalid Credintials</i></b>");
 			Assert.assertTrue(false);
-		//	logger.info("login test failed");
+			logger.info("login test failed");
 		}
 	   
    }

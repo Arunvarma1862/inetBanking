@@ -36,6 +36,7 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
@@ -57,13 +58,15 @@ public class BaseClass   {
 	public static ExtentReports extent;
 	public static ExtentTest extentTest;
 	
-	//   public static   Logger logger;
-	//   Logger logger = (Logger) LogManager.getLogger(BaseClass.class);
+	  public static   Logger logger;
+	  
 	
 	
 	@Parameters("browser")
 	@BeforeTest
 	public void setup(ITestContext context, @Optional("chrome") String br) {
+		
+		  logger =  (Logger) LogManager.getLogger(BaseClass.class.getName());
 			
 	//	    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//Drivers//chromedriver.exe");
 		
@@ -79,15 +82,20 @@ public class BaseClass   {
 		 	}
 		
 		//  driver.manage().window().maximize();
+	
+			
 
 	    
-	      
-	      Capabilities cap=((RemoteWebDriver)driver).getCapabilities();
+		 Capabilities cap=((RemoteWebDriver)driver).getCapabilities();
+	   
 	      String device= cap.getBrowserName()+"  "+cap.getVersion().substring(0, cap.getVersion().indexOf("."));
 	      String author= context.getCurrentXmlTest().getParameter("Author");
 	      extentTest=  extent.createTest(context.getName());	
 	      extentTest.assignAuthor(author);
 	      extentTest.assignDevice(device);
+	      
+		
+	     
 	}
 	
 	@AfterTest
@@ -140,7 +148,8 @@ public class BaseClass   {
          {
 			String screenshotpath=null;
 			screenshotpath=	captureS( result.getTestContext().getName()+"_"+ result.getMethod().getMethodName()+".jpg");
-			extentTest.addScreenCaptureFromPath(screenshotpath);
+			extentTest.fail(MediaEntityBuilder.createScreenCaptureFromPath(screenshotpath).build());
+		//	extentTest.addScreenCaptureFromPath(screenshotpath);
 			extentTest.fail(result.getThrowable());
 		}
 		else if(result.getStatus()==result.SUCCESS) {

@@ -7,7 +7,10 @@
         <methods>
           <include name="setup"/>
           <include name="loginTest"/>
+          <include name="checkStatus"/>
           <include name="TearDown"/>
+          <include name="intializeExtentReport"/>
+          <include name="generateExtentReport"/>
         </methods>
       </class> <!-- com.inetBanking.testCases.TC_LoginTest_001 -->
     </classes>

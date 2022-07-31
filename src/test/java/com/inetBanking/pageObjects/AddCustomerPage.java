@@ -82,7 +82,7 @@ public class AddCustomerPage {
 		states.sendKeys(tstate);
 		
 	}
-	public void txtpin(String tpin) {
+	public void txtpin(int  tpin) {
 		pin.sendKeys(String.valueOf(tpin));
 		
 	}

@@ -36,9 +36,10 @@ public class TC_LoginDDT_002 extends BaseClass{
 			
 			if(isAlertPresent()==true) {
 				driver.switchTo().alert().accept();  // close alert
-				driver.switchTo().defaultContent();   
+				driver.switchTo().defaultContent(); 
+				  extentTest.info ("login  details failed");
 			    Assert.assertTrue(false);
-			    extentTest.info ("login  details failed");
+			  
 			    
 			}
 			else {

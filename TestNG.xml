@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="inetBankingV1">
-	<test name="LoginTest1">
+
+	<test name="LoginTest1"  >
 		<parameter name="browser" value="edge" />
 		<parameter name="Author" value="kohli" />
 		<classes>
@@ -14,7 +15,7 @@
 	</test>
 
 
-	<test name="Login DDTest2">
+ 	<test name="Login DDTest2"  enabled="false">
 		<parameter name="browser" value="chrome" />
 		<parameter name="Author" value="virat" />
 		<classes>
@@ -24,9 +25,9 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
+	</test>  
 
-	<test name="AddCustomerTest">
+	<test name="AddCustomerTest"  enabled="false">
 		<parameter name="browser" value="edge" />
 		<parameter name="Author" value="varun" />
 		<classes>

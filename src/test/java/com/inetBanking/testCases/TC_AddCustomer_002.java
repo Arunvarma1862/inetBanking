@@ -42,9 +42,9 @@ public class TC_AddCustomer_002  extends BaseClass {
 		adp.txtAddress("indian");
 		adp.txtcity("vizag");
 		adp.txtstate("ap");
-	//	adp.txtpin(530044);
-		String pin=randomnum();
-		adp.txtpin(pin);
+		adp.txtpin(530044);
+	//	String pin=randomnum();
+	//	adp.txtpin(pin);
         adp.txttel("9662488855");
         String email= randomstring()+"@gmail.com";
         adp.txtmail(email);

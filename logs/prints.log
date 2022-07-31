@@ -1,0 +1,5 @@
+23:05:46.566 [main] INFO  com.inetBanking.testCases.BaseClass - Enter username
+23:05:46.712 [main] INFO  com.inetBanking.testCases.BaseClass - enter password
+23:06:00.238 [main] INFO  com.inetBanking.testCases.BaseClass - home page opened
+23:06:00.312 [main] INFO  com.inetBanking.testCases.BaseClass - login test passed
+23:06:00.651 [AsyncHttpClient-1-4] TRACE io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder - Encoding WebSocket Frame opCode=8 length=26
