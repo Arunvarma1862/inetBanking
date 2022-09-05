@@ -57,8 +57,7 @@ public class BaseClass   {
 	public static String screenshotsubfolderName;
 	public static ExtentReports extent;
 	public static ExtentTest extentTest;
-	
-	  public static   Logger logger;
+    public static Logger logger;
 	  
 	
 	
@@ -86,7 +85,7 @@ public class BaseClass   {
 			
 
 	    
-		 Capabilities cap=((RemoteWebDriver)driver).getCapabilities();
+		  Capabilities cap=((RemoteWebDriver)driver).getCapabilities();
 	   
 	      String device= cap.getBrowserName()+"  "+cap.getVersion().substring(0, cap.getVersion().indexOf("."));
 	      String author= context.getCurrentXmlTest().getParameter("Author");
@@ -153,7 +152,7 @@ public class BaseClass   {
 			extentTest.fail(result.getThrowable());
 		}
 		else if(result.getStatus()==result.SUCCESS) {
-			extentTest.pass(m+"  it is passed  ");
+			extentTest.pass( m + "  it is passed  ");
 			
 		}
 		    extentTest.assignCategory(m.getAnnotation(Test.class).groups());
@@ -207,6 +206,8 @@ public class BaseClass   {
 		String generatedstring2=	RandomStringUtils.randomAlphanumeric(6);
 		return generatedstring2;
 		}
+		
+	
 
 	
 

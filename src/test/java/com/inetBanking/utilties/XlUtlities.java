@@ -26,7 +26,7 @@ public class XlUtlities {
 			XSSFWorkbook workbook = new XSSFWorkbook(fis);
 			XSSFSheet sheet = workbook.getSheet("Sheet1");
 			
-			int rowcount = sheet.getPhysicalNumberOfRows();
+			int rowcount =  sheet.getPhysicalNumberOfRows();
 	        int columncount= sheet.getRow(0).getLastCellNum();
 
 			String[][] data= new String[rowcount-1][columncount];

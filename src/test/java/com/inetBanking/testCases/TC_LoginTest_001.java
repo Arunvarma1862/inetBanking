@@ -14,7 +14,7 @@ public class TC_LoginTest_001 extends BaseClass {
 		  driver.get(baseURL);
 		  extentTest.info("<b><i>Navigate to url</i></b>");
 		
-		LoginPage lp = new LoginPage(driver);
+		  LoginPage lp = new LoginPage(driver);
 		
 		lp.setUserName(username);
 		extentTest.info("<b><i>Enter valid userID</i></b>");
@@ -23,9 +23,10 @@ public class TC_LoginTest_001 extends BaseClass {
 		lp.setPassword(password);
 		extentTest.info("<b><i>Enter valid Password</i></b>");
 		logger.info("enter password");
+		
 		lp.clickSubmit();
 		extentTest.log(Status.INFO,"<b><i>Click on login</i></b>");
-    	logger.info("home page opened");
+    	logger.info("click on login button");
 		
 	
 		
@@ -40,8 +41,9 @@ public class TC_LoginTest_001 extends BaseClass {
 		else
 		{
 			extentTest.log(Status.INFO,"<b><i>Invalid Credintials</i></b>");
-			Assert.assertTrue(false);
 			logger.info("login test failed");
+			Assert.assertTrue(false);
+		
 		}
 	   
    }

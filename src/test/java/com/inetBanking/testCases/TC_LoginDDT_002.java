@@ -1,22 +1,16 @@
 package com.inetBanking.testCases;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.time.Duration;
 
-import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import java.time.Duration;
 import org.openqa.selenium.NoAlertPresentException;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import com.aventstack.extentreports.Status;
 import com.inetBanking.pageObjects.LoginPage;
 import com.inetBanking.utilties.XlUtlities;
 
 public class TC_LoginDDT_002 extends BaseClass{
+	
 	@Test( dataProvider = "getData", dataProviderClass = XlUtlities.class)
 	   public void loginTest2(String usernam,String passwor) throws Exception {
 		
@@ -37,7 +31,7 @@ public class TC_LoginDDT_002 extends BaseClass{
 			if(isAlertPresent()==true) {
 				driver.switchTo().alert().accept();  // close alert
 				driver.switchTo().defaultContent(); 
-				  extentTest.info ("login  details failed");
+				 extentTest.info ("login  details failed");
 			    Assert.assertTrue(false);
 			  
 			    

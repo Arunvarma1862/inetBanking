@@ -7,13 +7,13 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AddCustomerPage {
 
-	WebDriver ldriver;
+	WebDriver driver;
 	
-	public AddCustomerPage(WebDriver rdriver){
+	public AddCustomerPage(WebDriver driver){
 		
-		ldriver= rdriver;
+	this.	driver= driver;
 		
-		PageFactory.initElements(rdriver, this);
+		PageFactory.initElements(driver, this);
 		
 		
 	}
@@ -64,7 +64,7 @@ public class AddCustomerPage {
 		MF.click();
 		
 	}
-	public void dateEnter(String dd,String mm, String yyyy) {
+	public void dateEnter(String dd , String mm, String yyyy) {
 		db.sendKeys(dd);
 		db.sendKeys(mm);
 		db.sendKeys(yyyy);
@@ -82,7 +82,7 @@ public class AddCustomerPage {
 		states.sendKeys(tstate);
 		
 	}
-	public void txtpin(int  tpin) {
+	public void txtpin(int tpin) {
 		pin.sendKeys(String.valueOf(tpin));
 		
 	}

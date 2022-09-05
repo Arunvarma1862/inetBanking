@@ -44,8 +44,8 @@ public class ReadConfig {
 		return User;
 		}
 	public String getpassword()  {
-		String pass=	pro.getProperty("password") ;
-		return pass;
+		return 	pro.getProperty("password") ;
+		
 		}
 
 }
